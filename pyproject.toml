@@ -1,0 +1,27 @@
+[project]
+name = "knife-edge-billiard"
+version = "1.0.0"
+description = "Simulation code for `The Integrability of a knife-edge Billiard in a Disk`"
+readme = "README.md"
+authors = [{ name = "Huaidian Hou", email = "houhd@umich.edu" }]
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.10.9",
+    "numpy>=2.4.6",
+    "pydantic>=2",
+    "pyyaml>=6.0.3",
+    "seaborn>=0.13.2",
+    "tqdm>=4.68.1",
+]
+
+[project.scripts]
+knife-edge-billiard = "knife_edge_billiard.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["knife_edge_billiard"]

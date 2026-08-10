@@ -1,0 +1,15 @@
+# A straight (omega = 0) impact produced *by* the first impact.
+billiard:
+  R: 1.0
+
+coin:
+  x: 0.7603466286014675        # interior point on the incoming arc
+  y: 0.21550118430244464
+  theta: -0.9502209238309169
+  v: 0.3
+  omega: 2.042116760688078     # tuned so the first impact sends omega -> 0
+  l: 0.1                       # half-length: the coin spans [-l, +l]
+  m: 1.0
+  # J omitted -> derived as the uniform bar J = m*l^2/3 = 0.00333...
+  # (equivalently m*ell^2/12 for the full length ell = 2l).  omega above was
+  # re-solved for this J; it was 1.9004418476618339 under the old J = m*l^2/2.
